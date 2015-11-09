@@ -15,5 +15,17 @@
 
 - Diapositivas
   - http://es.slideshare.net/camposer/hadoop-54911241
+- Libros
+  - http://smartcamp.es/~camposer/hadoop/
 - Ejemplo de MapReduce
   - http://hadoop.apache.org/docs/current/hadoop-mapreduce-client/hadoop-mapreduce-client-core/MapReduceTutorial.html
+
+## Enlaces
+
+- Hortonworks
+  - http://hortonworks.com/
+- Cloudera
+  - http://www.cloudera.com/
+- Amazon EMR 
+  - https://aws.amazon.com/es/elasticmapreduce/
+
