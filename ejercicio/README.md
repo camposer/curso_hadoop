@@ -5,4 +5,6 @@ Este ejercicio incluye ejemplos de:
 - Pig
 - Hive
 
-El fichero movies puede descargarse de: http://smartcamp.es/~camposer/hadoop/movies.zip
+El fichero movies puede descargarse de: 
+- http://smartcamp.es/~camposer/hadoop/movies.zip
+- http://snap.stanford.edu/data/web-Movies.html
