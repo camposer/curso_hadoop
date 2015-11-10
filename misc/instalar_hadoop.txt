@@ -8,10 +8,10 @@ Acquire::http::Proxy "http://USUARIO:CONTRASEÑA@IP_PROXY:PUERTO_PROXY";
 $ sudo aptitude install vim
 
 1.- Instalar JDK (sólo necesario JRE para ejecutar)
-$ sudo aptitude install openjdk-7-jdk
+$ sudo aptitude install openjdk-8-jdk
 
 2.- Configurar variables de entorno JAVA_HOME. Dentro del ~/.bashrc
-export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-i386
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-i386/
 
 3.- Descargar Hadoop y descomprimir en ~/
 NOTA: Para descomprimir: 
