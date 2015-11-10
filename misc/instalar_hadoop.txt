@@ -1,3 +1,6 @@
+Para editar archivos fuera del área /home/ubuntu, puede utilizar el gedit de la siguiente forma:
+$ sudo gedit
+
 -1.- Configurar proxy APT. Dentro del archivo /etc/apt/apt.conf agregar:
 Acquire::http::Proxy "http://USUARIO:CONTRASEÑA@IP_PROXY:PUERTO_PROXY";
 
