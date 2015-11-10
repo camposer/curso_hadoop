@@ -4,9 +4,6 @@
 export PIG_HOME=/home/hadoop/pig-0.12.1
 export PATH=$PATH:$PIG_HOME/bin
 
-3.- Recompilar para funcionar con Hadoop 2.2
-$ sudo aptitude install ant
-$ cd $PIG_HOME
-$ ant clean jar-all -Dhadoopversion=23
-
+3.- Abrir intérprete de comandos (grunt)
+$ pig
 
