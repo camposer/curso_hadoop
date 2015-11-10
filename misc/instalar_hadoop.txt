@@ -17,8 +17,8 @@ export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-i386/
 NOTA: Para descomprimir: 
 $ tar xvfz hadoop-0.23.10.tar.gz
 
-4.- Configurar variables de entorno HADOOP_INSTALL y PATH
-export HADOOP_HOME=/home/hadoop/hadoop-0.23.10
+4.- Configurar variables de entorno HADOOP_INSTALL y PATH (dentro de ~/.bashrc)
+export HADOOP_HOME=/home/ubuntu/hadoop-2.6.2
 export PATH=$PATH:$HADOOP_HOME/bin
 
 4.1.- Verificar la instalación de Hadoop. Puede utilizar MapReduce como una instalación local a este punto
@@ -45,11 +45,11 @@ $ hadoop version
 	</property>
         <property>
                 <name>dfs.name.dir</name>
-                <value>file:///home/hadoop/dfs/name</value>
+                <value>file:///home/ubuntu/dfs/name</value>
         </property>
         <property>
                 <name>dfs.data.dir</name>
-                <value>file:///home/hadoop/dfs/data</value>
+                <value>file:///home/ubuntu/dfs/data</value>
         </property>
 </configuration>
 
