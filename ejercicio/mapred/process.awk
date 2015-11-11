@@ -4,5 +4,5 @@
 }
 
 /review\/text/ { 
-	print "\n";
+	print;
 }
