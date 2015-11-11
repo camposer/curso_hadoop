@@ -66,6 +66,7 @@ $ exit
 
 7.- Preparando el Nodo de Nombres (namenode)
 
+$ mdkir /home/ubuntu/dfs
 $ hdfs namenode -format
 
 8.- Iniciando el servicio HDFS

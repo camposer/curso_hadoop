@@ -12,6 +12,7 @@
 		value = 0;
 	} 
 }
+
 END {
 	print key "\t" value;
 }
