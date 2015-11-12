@@ -4,6 +4,7 @@ BEGIN {
 	FS = "|"; # field separator
 
 	if (!pattern)
+#		pattern = "have";
 		pattern = "Tom Cruise";
 }
 
