@@ -28,4 +28,7 @@
   - http://www.cloudera.com/
 - Amazon EMR 
   - https://aws.amazon.com/es/elasticmapreduce/
+- Requirements for the map and reduce functions
+  - https://docs.mongodb.org/manual/reference/command/mapReduce/#requirements-for-the-map-function
+  - https://docs.mongodb.org/manual/reference/command/mapReduce/#requirements-for-the-reduce-function
 
