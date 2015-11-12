@@ -1,7 +1,6 @@
 #!/usr/bin/awk -f
 
 BEGIN {
-	count = 0;
 	min = 99999;
 	max = 0;
 }
@@ -9,7 +8,7 @@ BEGIN {
 { 
 	tmpkey = $1;
 	score += $2;
-	count++;	
+	count += $3;
 	min = ($2 < min) ? $2 : min;
 	max = ($2 > max) ? $2 : max;
 
