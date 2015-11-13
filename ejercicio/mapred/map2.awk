@@ -8,6 +8,7 @@ BEGIN {
 	productId = $2;
 	score = $6;
 	count = 1;
-
-	print productId "\t" score "\t" count;
+	
+	if (score + 0 == score) # checking score is a number
+		print productId "\t" score "\t" count;
 }

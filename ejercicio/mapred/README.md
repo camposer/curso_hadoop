@@ -1,33 +1,39 @@
-# Instrucciones
+# Ejercicios
 
-## map.awk y reduce.awk sin MapReduce
+1.- Obtener las películas donde se menciona al actor "Tom Cruise" dentro del review/text (debe especificar el número de repiticiones)
 
-1.- Ajustar el archivo movies.txt a un archivo separado por pipes
-```
-$ awk -f process.awk movies.txt > movies-lines.txt
-```
+2.- Obtener el score promedio, menor y mayor por película (product/productId)
 
-2.- Extraer subconjunto del archivo movies-lines.txt
-```
-$ head -2000 movies-lines.txt > movies-lines2000.txt
-```
+# Ejecución
 
-3.- Ejecutar el comando map.awk sobre el archivo movies-lines2000.txt
-```
-$ sed '1d' movies-lines2000.txt | map.awk
-```
+Para validar las funciones map y reduce puede ejecutar primero los ejemplos utilizando únicamente la consola y luego con MapReduce.
 
-4.- Ejecutar el comando map.awk con el sort y el reduce.awk 
+## Ejecución con consola únicamente
+
+### Ejercicio 1
+
 ```
-$ sed '1d' movies-lines2000.txt | ./map.awk | sort -k1 | ./reduce.awk > resultado
+$ cat movies-lines2000.txt | ./map1.awk | sort -k1 | ./reduce1.awk
 ```
 
-## MapReduce
+### Ejercicio 2
 
-$ hadoop jar $HADOOP_HOME/share/hadoop/tools/lib/hadoop-streaming-2.2.0.jar -mapper map.awk -reducer reduce.awk -input /ejemplos/movies/movies-lines2000.txt -output /ejemplos/movies/output
+```
+$ cat movies-lines2000.txt | ./map2.awk | sort -k1 | ./combine2.awk | sort -k1 | ./reduce2.awk
+```
 
-NOTA: El archivo movies-lines2000.txt previamente debió subirse al HDFS en la carpeta /ejemplos/movies. Recuerde eliminar la primera línea
+## Ejecución con MapReduce
 
-## Ejercicios adicionales
+### Ejercicio 1
+```
+$ hadoop jar $HADOOP_HOME/share/hadoop/tools/lib/hadoop-streaming-2.2.6.jar -mapper map1.awk -reducer reduce1.awk -input /ejemplos/movies/movies-lines2000.txt -output /ejemplos/movies/output
+```
 
-1.- Score promedio, menor y mayor por película (productId)
+### Ejercicio 2
+
+```
+$ hadoop jar $HADOOP_HOME/share/hadoop/tools/lib/hadoop-streaming-2.2.6.jar -mapper map2.awk -combiner combine2.awk -reducer reduce2.awk -input /ejemplos/movies/movies-lines2000.txt -output /ejemplos/movies/output
+```
+
+NOTA: Recuerde que la ubicación del archivo `movies-lines2000.txt` ser válida para Hadoop (ver HDFS). Por ejemplo: el siguiente comando debería ejecutarse satisfactoriamente: `hadoop fs -ls /ejemplos/movies/movies-lines2000.txt`
+

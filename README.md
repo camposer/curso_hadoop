@@ -31,4 +31,5 @@
 - Requirements for the map and reduce functions
   - https://docs.mongodb.org/manual/reference/command/mapReduce/#requirements-for-the-map-function
   - https://docs.mongodb.org/manual/reference/command/mapReduce/#requirements-for-the-reduce-function
-
+- MapReduce - Combiners
+  - http://www.tutorialspoint.com/map_reduce/map_reduce_combiners.htm
