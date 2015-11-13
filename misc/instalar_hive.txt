@@ -7,3 +7,8 @@ export PATH=$PATH:$HIVE_HOME/bin
 
 3.- Probar hive (metadata embedded)
 $ hive
+
+NOTA: Si la instalación de hadoop es local, deberá agregar lo siguiente al archivo `~/.hiverc`
+```
+SET hive.metastore.warehouse.dir=${env:HOME}/hive-warehouse;
+```
