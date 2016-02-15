@@ -2,20 +2,22 @@
 
 BEGIN {
 	value = 0;
+	key = 0;
 }
 
-{ 
+{
 	tmpkey = $1;
-	value += $2;
+	if (key == 0) 
+		key = tmpkey;
 
 	if (tmpkey != key) {
-		if (key) {
-			print key "\t" value;
-			value = 0;
-		}
+		print key "\t" value;
+		value = 0;
 
 		key = tmpkey;
 	} 
+
+	value += $2;
 }
 
 END {
