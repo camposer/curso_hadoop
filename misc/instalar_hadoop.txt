@@ -4,6 +4,10 @@ $ sudo gedit
 -1.- Configurar proxy APT. Dentro del archivo /etc/apt/apt.conf agregar:
 Acquire::http::Proxy "http://USUARIO:CONTRASEÑA@IP_PROXY:PUERTO_PROXY";
 
+-2.- Configurar proxy por consola. Dentro del archivo ~/.bashrc descomentar y completar:
+export http_proxy="http://USUARIO:CONTRASEÑA@IP_PROXY:PUERTO_PROXY";
+export https_proxy="http://USUARIO:CONTRASEÑA@IP_PROXY:PUERTO_PROXY";
+
 0.- Instalar VIM!
 $ sudo aptitude install vim
 
