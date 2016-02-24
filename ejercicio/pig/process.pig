@@ -1,4 +1,4 @@
-%declare FILE '/ejemplos/movies/movies-lines2000.txt';
+%declare FILE 'movies-lines2000.txt';
 %declare PATTERN 'tom cruise';
 
 raw_movies = LOAD '$FILE' USING PigStorage('|') AS (

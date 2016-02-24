@@ -1,0 +1,32 @@
+SETUP de la Instalación
+=======================
+
+1.- Modificar proxies en archivo ~/.bashrc
+export http_proxy="http://USUARIO:CONTRASEÑA@IP_PROXY:PUERTO_PROXY";
+export https_proxy="http://USUARIO:CONTRASEÑA@IP_PROXY:PUERTO_PROXY";
+
+1.5.- Eliminar información previa (paso opcional):
+$ rm -rf /home/ubuntu/dfs/name/*
+$ rm -rf /home/ubuntu/dfs/data/*
+$ hdfs namenode -format
+
+2.- Abrir una consola (CTR + ALT + T) y ejecutar
+$ hdfs namenode
+
+NOTA: Debería quedarse escuchando el nodo de nombres
+
+3.- Abrir una pestaña (CTR + SHIFT + T) y ejecutar:
+$ hdfs datanode
+
+NOTA: Debería quedarse escuchando el nodo de datos
+
+4.- Abrir una pestaña (CTR + SHIFT + T) y ejecutar:
+$ hdfs dfs -ls /
+
+NOTA: Obvie los warnings
+
+5.- Seguir el ejercicio ubicado en el repo:
+curso_hadoop/ejercicio/hdfs/README.md
+
+NOTA: La carpeta curso_hadoop está en la máquina virtual también, dentro del home del usuario ubuntu
+
